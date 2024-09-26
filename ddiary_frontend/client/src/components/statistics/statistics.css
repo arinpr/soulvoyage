@@ -1,0 +1,10 @@
+.statistics-container {
+    display: flex;
+    height: 100vh;
+    font-family: var(--font-family);
+}
+
+.statistics-data {
+    width: 100%;
+    background-color: rgb(30 41 59);
+}

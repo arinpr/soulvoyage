@@ -1,0 +1,35 @@
+{
+  "name": "diary_frontend_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd ./server && npm run server\" \"cd ./client && npm run dev\"",
+    "build": "cd client && npm install && npm run build",
+    "deploy": "aws s3 sync dist s3://soulvoyagefrontned"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.11",
+    "aws-cli": "^0.0.2",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.2",
+    "concurrently": "^8.2.2",
+    "diary_frontend_backend": "file:",
+    "express": "^4.18.2",
+    "firebase": "^10.8.1",
+    "history": "^5.3.0",
+    "husky": "^9.0.11",
+    "passport-local-mongoose": "^8.0.0",
+    "path": "^0.12.7",
+    "react-bootstrap": "^2.9.1",
+    "react-select": "^5.8.0",
+    "react-toastify": "^10.0.4",
+    "router-dom": "^2.2.11"
+  },
+  "homepage": "."
+}

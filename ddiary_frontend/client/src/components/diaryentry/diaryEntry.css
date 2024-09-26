@@ -1,0 +1,71 @@
+.custom_title{
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+    border: 1px solid #8b8a8a;
+    outline: none;
+    padding-left: 20px;
+    /*color: #fff;
+    *//*text-align: center;
+    */font-size: 18px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.custom_title:focus{
+    outline: none;
+    border: 1px solid #8b8a8a;
+}
+/* .custom_title::placeholder{
+    color: #ffffff87;
+} */
+.custom_textArea{
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #8b8a8a;
+    outline: none;
+    height: 45vh !important;
+    padding: 20px;
+    /* color: #fff; */
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    resize: none;
+    height: 400px;
+    font-size: 18px;
+}
+/* .custom_textArea::placeholder{
+    color: #ffffff87;
+} */
+.Journal_diary_entry .card{
+    /* background-color: #D9D9D9; */
+    border: none;
+    padding: 40px;
+    box-shadow: 1px 2px 12px #8a8a8a;
+    
+}
+.custom_submit{
+    width: 200px;
+    padding: 10px 30px;
+    background-color: rgb(22, 22, 159);
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: auto;
+    font-size: 18px;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .Journal_diary_entry .card{
+        padding: 10px;
+    }
+}

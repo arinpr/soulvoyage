@@ -1,0 +1,22 @@
+.footer_section{
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_section img{
+    margin-right: 20px;
+}
+.footer_section a{
+    padding-left: 20px;
+}
+@media screen and (max-width: 700px){
+    .footer_section{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+    }
+    .footer_section p{
+        padding: 30px 0;
+    }
+}

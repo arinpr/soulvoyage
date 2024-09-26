@@ -1,0 +1,83 @@
+.diary-entry-container {
+  font-family: var(--font-family);
+}
+
+.diary-entry-container {
+  max-height: 100%;
+  overflow-y: scroll;
+  display: flex;
+}
+
+.abc {
+  height: 100%;
+  margin-top: 2%;
+  width: 96%;
+}
+
+
+.eachItem{
+  width: 33.33%;
+  flex-direction: column;
+}
+
+/* 
+@media (min-width: 576px) {
+  .eachItem {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .eachItem {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+} */
+
+@media (max-width: 1087px) {
+  .eachItem {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 743px) {
+  .eachItem {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 30px;
+}
+
+.child {
+  width: 250px; /* Fixed width */
+  display: flex;
+  flex-direction: column; /* Allows stacking content vertically */
+  justify-content: flex-start; /* Aligns content to the top */
+  align-items: center; /* Centers content horizontally */
+  box-sizing: border-box;
+  padding: 10px; /* Optional: Adds padding around content */
+ /* Optional: Visual border for better layout view */
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  /* box-shadow: 1px 2px 12px #8a8a8a; */
+}
+.parent .card{
+  box-shadow: 8px 7px 14px #a1a0a085;
+}
+@media screen and (max-width: 700px) {
+  .parent {
+
+    justify-content: center ;
+
+  }
+}

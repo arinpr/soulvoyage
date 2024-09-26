@@ -1,0 +1,38 @@
+:root {
+    /* Colors */
+    --black: #09090c;
+    --grey: #a4b2bc;
+    --white: #fff;
+    --background: rgba(137, 171, 245, 0.37);
+  }
+  .selectField{
+    display: none;
+  }
+.selectHover:hover + .selectField {
+    display: block; /* Show the select field on hover */
+    position: absolute; /* Position it as needed */
+    left: 30px;
+    z-index: 9999;
+}
+.custom_dropdown .btn{
+  padding: 0 !important;
+  background: none !important;
+  border: none;
+}
+.large_dropdown .btn{
+  padding: 0 !important;
+  background: none !important;
+  border: none;
+  margin-left: 10px;
+}
+.custom_select_journal .css-v3zyv7-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  /* padding: 9.5px 14px !important; */
+}
+.disabledItem{
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.dropdown-menu.show{
+  position: fixed !important;
+}

@@ -1,0 +1,16 @@
+.custom-text-color-h {
+    color: #222429 !important;
+    font-family: var(--edited-family) !important;
+    /* padding-top: 90px; */
+  }
+  
+  .custom-text-p {
+    color: #595b5f;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  
+  .possibilities-custom {
+    margin-top: 67px !important;
+  }

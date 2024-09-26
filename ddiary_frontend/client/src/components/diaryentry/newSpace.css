@@ -1,0 +1,117 @@
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+}
+
+.scroll-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background-color: #fff;
+    padding: 10px;
+   
+    
+}
+.scroll-item .ItemCard{
+    box-shadow: 1px 2px 12px #8a8a8a;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.scroll-item label{
+    width: 100%;
+}
+.safe_title{
+    background-color: #716969;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+}
+.scroll-item .main-content textarea{
+    height: 250px;
+    resize: none;
+    border: 1px solid #8b8a8a;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.scroll-item .main-content textarea:focus{
+    outline: none;
+    border: 1px solid #8b8a8a;
+}
+@media (min-width: 768px) {
+    .scroll-item {
+        flex: 0 0 50%; /* Two items for larger screens */
+    }
+}
+
+.dots-container {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #000;
+}
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.scroll-container {
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+.primaryButton{
+    width: 200px;
+    padding: 10px 30px;
+    background-color: rgb(22, 22, 159);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.main_card{
+    border: none !important;
+    background: transparent !important;
+}
+@media screen and (max-width:700px) {
+    .scroll-item .main-content textarea{
+        height: 50vh !important;
+    }
+    .scroll-container {
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+}

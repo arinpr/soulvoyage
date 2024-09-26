@@ -1,0 +1,41 @@
+.vector_underline h1{
+	font-family: var(--edited-family) !important;
+	position: absolute;
+	z-index: 1;
+}
+.vector_underline{
+	position: relative;
+	min-height: 180px;
+}
+.vector_underline img{
+	position: absolute;
+	top: 35px;
+	left: 50px;
+	
+}
+.common_button{
+	padding: 15px 50px;
+	background-color: #555AE2;
+	outline: none;
+	border: none;
+	margin-bottom: 80px;
+	color: #fff;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+@media screen and (max-width: 700px){
+	.vector_underline img{
+		width: 30%;
+		left: 100px;
+	}
+	.vector_underline h1{
+		font-size: 40px;
+	}
+    .common_button{
+        padding:  15px 20px;
+        font-size: 15px;
+    }
+  }

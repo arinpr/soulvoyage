@@ -1,0 +1,32 @@
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+.accordion-button {
+    background-color: transparent; /* Remove background color */
+    
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: transparent; /* Ensure background remains transparent when expanded */
+    font-weight: 700;
+  }
+  .Journal_heading{
+    font-family: var(--edited-family);
+  }
+  .question_container{
+    padding: 20px 150px;
+  }
+  .inner_text{
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: 700px){
+    .question_container{
+        padding: 20px 0px;
+      }
+  }
+  @media screen and (max-width: 1080px){
+    .question_container{
+        padding: 20px 0px;
+      }
+  }

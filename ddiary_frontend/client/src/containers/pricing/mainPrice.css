@@ -1,0 +1,40 @@
+.Journal_price{
+    font-family: var(--edited-family);
+}
+.Price1{
+    background-color: #555AE20D;
+    padding: 40px 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    flex-grow: 1; /* Make each child grow equally to fill available space */
+    flex-basis: 0;
+    width: 100%;
+    box-shadow: 1px 1px 12px #e3e0e0;
+}
+.Price1 .col-1{
+    align-items: start;
+    align-self: self-start;
+}
+
+.Journal_Price_box{
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 1200px){
+    .Journal_Price_box{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:500px) {
+    .Price1{
+        .row{
+            flex-direction: row !important;
+        }
+    }
+}

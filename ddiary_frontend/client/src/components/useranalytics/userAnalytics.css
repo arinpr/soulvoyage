@@ -1,0 +1,32 @@
+.user-analytics-container {
+    display: flex;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+.user-analytics_journal-activity {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    width: max-content
+}
+
+h2 {
+    padding: 10px;
+    width: 100%;
+}
+
+.user-analytics_activity-stats-container {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    width: max-content
+}
+
+.user-analytics_activity-stats {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(35, 35, 219, 0.239);
+    padding: 10px;
+    margin: 10px;
+}

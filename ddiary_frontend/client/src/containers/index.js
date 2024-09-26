@@ -1,0 +1,9 @@
+export { default as Blog } from "./blog/Blog";
+export { default as Features } from "./features/Features";
+export { default as Footer } from "./footer/Footer";
+export { default as Header } from "./header/Header";
+export { default as Possibility } from "./possibility/Possibility";
+export { default as SignIn } from "./signin/SignIn";
+export { default as WhatGPT } from "./whatGPT/whatAIJournal";
+export { default as Pricing } from "./pricing/Pricing";
+export { default as SignUp } from "./signup/SignUp";

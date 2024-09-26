@@ -1,0 +1,45 @@
+.modal-body {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+    white-space: pre-line;
+}
+
+.listitem-button {
+    flex: 1;
+    max-height: 40px;
+    max-width: 60%;
+}
+
+.diaryCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 820px) {
+    .cardText{
+        font-size: 11px;
+    }
+}
+/* @media (max-width: 500px) {
+
+    button {
+        flex: 0;
+        font-size: 2px;
+    }
+} */
+/*
+@media (max-width: 400px) {
+    .cardText{
+        font-size: 1px;
+    }
+    .cardTitle{
+        font-size: 1px;
+    }
+} */

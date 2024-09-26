@@ -1,0 +1,38 @@
+.Journal_Professional_Help{
+    background-color: #FFB93E0D;
+}
+.Professional_Help_box{
+    padding: 0 6rem;
+}
+.Professional_Help_box h1{
+    font-size: 50px;
+}
+.text_box{
+    width: 80%;
+}
+@media screen and (max-width:700px){
+    .Professional_Help_box{
+        padding: 0rem;
+        overflow: hidden;
+    } 
+    .Professional_Help_box img{
+        width: 100%;
+    }
+    .text_box{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .Professional_Help_box h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:992px){
+    
+    .Professional_Help_Image{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }   
+}
