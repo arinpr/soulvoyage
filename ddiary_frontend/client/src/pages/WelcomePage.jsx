@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './welcomepage.css';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {
 	
 	DiaryEntry,
@@ -12,14 +12,28 @@ import {
 	Grief_journal
 } from "../components";
 import MainSidebar from '../components/navbar/MainSidebar';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
+const darkTheme = createTheme({
+    palette: {
+      mode: 'light', 
+      primary: {
+        main: '#000000',
+      },
+    },
+  });
 const WelcomePage = () => {
-	
-	const location = useLocation();
-	const queryParams = new URLSearchParams(location.search);
-  	const selectedValue = queryParams.get('template') || '';
+	const navigate = useNavigate();
+	const [selectedValue, setSelectedValue] = useState(localStorage.getItem('selectedTemplate') || '');
     
+	  const handleDropdownChange = (event) => {
+		event.preventDefault();
+		const value = event.target.value;
+		setSelectedValue(value);
+		localStorage.setItem('selectedTemplate', value);
+		navigate(`/welcome-page?template=${value}`);
+	  };
 
 	const renderSelectedComponent = () => {
 		switch (selectedValue) {
@@ -52,6 +66,27 @@ const WelcomePage = () => {
 				{/* <Statistics /> */}
 				<MainSidebar />
 				<div className="content">
+				<div className='w-50 w-sm-75 px-4'>
+                <ThemeProvider theme={darkTheme}>
+                  <FormControl fullWidth>
+                    <InputLabel id="select-label" className="">Select Template</InputLabel>
+                    <Select
+                      labelId="select-label"
+                      id="select"
+                      className=" w-100"
+                      
+                      value={selectedValue}
+                      label="Select Template"
+                      onChange={handleDropdownChange}
+                    >
+                      <MenuItem value="diary">Template</MenuItem>
+                      <MenuItem value="Safe_space">Safe Space</MenuItem>
+                      <MenuItem value="Slow_movement">Slow Movement</MenuItem>
+                      <MenuItem value="Grief_journal">Grief Journal</MenuItem>
+                    </Select>
+                  </FormControl>
+                </ThemeProvider>
+              </div>
 					{renderSelectedComponent()} {/* Render selected component */}
 				</div>
 				

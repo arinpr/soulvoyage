@@ -42,11 +42,7 @@ const List = ({dbpath}) => {
     fetchItems();
   }, []);
 
-  if(items.length == 0){
-    return(
-      <><h1 className="text-center pt-5">No entries made by you</h1></>
-    );
-  }
+  
   
   return (
     <div className="ml-auto w-100">

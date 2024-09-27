@@ -29,23 +29,20 @@ const Safe_space = () => {
     const [dbpath, setDbpath] = useState();
 
     useEffect(() => {
+        setNumDots(6); // Always show 6 dots
         if (currentEnv === "local") {
             setDbpath(devUrl);
         } else {
             setDbpath(prodUrl);
         }
         const handleResize = () => {
-            // Update number of dots based on screen size
-            if (window.innerWidth >= 768) {
-                setNumDots(3); // Large screens show 3 dots
-            } else {
-                setNumDots(6); // Small screens show 6 dots
-            }
+            // Keep number of dots to 6 regardless of screen size
+            setNumDots(6);
         };
-
+    
         handleResize(); // Set on load
         window.addEventListener("resize", handleResize); // Set on resize
-
+    
         return () => {
             window.removeEventListener("resize", handleResize);
         };
@@ -114,27 +111,29 @@ const Safe_space = () => {
     };
 
     // Handle scroll event to update active dot
-    const handleScroll = () => {
-        const container = scrollContainerRef.current;
-        const containerWidth = container.offsetWidth;
-        const scrollLeft = container.scrollLeft;
-        const activeIndex = Math.round(scrollLeft / containerWidth);
-        setActiveDot(activeIndex);
-    };
+   // Handle scroll event to update active dot
+const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    const containerWidth = container.offsetWidth;
+    const scrollLeft = container.scrollLeft;
+    const activeIndex = Math.round(scrollLeft / containerWidth);
+    setActiveDot(activeIndex); // Update active dot based on scroll position
+};
 
-    // Scroll to a particular item when a dot is clicked
-    const scrollToItem = (index) => {
-        const container = scrollContainerRef.current;
-        const containerWidth = container.offsetWidth;
-        container.scrollTo({ left: containerWidth * index, behavior: "smooth" });
-    };
+// Scroll to a particular item when a dot is clicked
+const scrollToItem = (index) => {
+    const container = scrollContainerRef.current;
+    const containerWidth = container.offsetWidth;
+    container.scrollTo({ left: containerWidth * index, behavior: "smooth" }); // Smooth scroll to the item
+};
+
 
     return (
         <>
 
         
-        <div className=" card p-2 main_card ">
-            <div className="global_card w-100">
+        <div className=" p-2 w-100 px-sm-4 Journal_diary_entry ">
+            <div className="card">
                 <h1 id="safe_space_heading pb-3">Safe space journaling</h1>
                 <div
                     className="scroll-container"

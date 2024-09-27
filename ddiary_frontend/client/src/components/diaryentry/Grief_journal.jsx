@@ -37,16 +37,13 @@ const Grief_journal = () => {
         }
         // Update dots based on screen size
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setNumDots(4); // Show 4 dots on large screens (2 items visible at a time)
-            } else {
-                setNumDots(7); // Show 7 dots on small screens (1 item visible at a time)
-            }
+            // Keep number of dots to 6 regardless of screen size
+            setNumDots(7);
         };
-
+    
         handleResize(); // Set on load
         window.addEventListener("resize", handleResize); // Set on resize
-
+    
         return () => {
             window.removeEventListener("resize", handleResize);
         };
@@ -133,8 +130,8 @@ const Grief_journal = () => {
     };
 
     return (
-        <div className="card p-2 main_card">
-            <div className="global_card w-100">
+        <div className="p-2 w-100 px-sm-4 Journal_diary_entry">
+            <div className="card">
                 <h1 id="safe_space_heading">Grief Journaling</h1>
                 <div
                     className="scroll-container"

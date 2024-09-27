@@ -29,23 +29,20 @@ const Slow_movement = () => {
     const [dbpath, setDbpath] = useState();
 
     useEffect(() => {
+        setNumDots(6); // Always show 6 dots
         if (currentEnv === "local") {
             setDbpath(devUrl);
         } else {
             setDbpath(prodUrl);
         }
-        // Update dots based on screen size
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setNumDots(3); // Show 3 dots on large screens
-            } else {
-                setNumDots(6); // Show 6 dots on small screens
-            }
+            // Keep number of dots to 6 regardless of screen size
+            setNumDots(6);
         };
-
+    
         handleResize(); // Set on load
         window.addEventListener("resize", handleResize); // Set on resize
-
+    
         return () => {
             window.removeEventListener("resize", handleResize);
         };
@@ -129,8 +126,8 @@ const Slow_movement = () => {
     };
 
     return (
-        <div className="card p-2 main_card">
-            <div className="global_card w-100">
+        <div className="p-2 w-100 px-sm-4 Journal_diary_entry ">
+            <div className="card">
                 <h1 id="safe_space_heading">Slow Movement Journaling</h1>
                 <div
                     className="scroll-container"

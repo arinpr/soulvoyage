@@ -134,7 +134,7 @@ const HamburgerIcon = styled.div`
 const MainSidebar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 768); 
   const navigate = useNavigate();
-  const [selectedValue, setSelectedValue] = useState(localStorage.getItem('selectedTemplate') || '');
+  const [selectedValue] = useState(localStorage.getItem('selectedTemplate') || '');
   const { username } = getTokenEmailUsername();
   useEffect(() => {
     const handleResize = () => {
@@ -149,26 +149,13 @@ const MainSidebar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleDropdownChange = (event) => {
-    event.preventDefault();
-    const value = event.target.value;
-    setSelectedValue(value);
-    localStorage.setItem('selectedTemplate', value);
-    navigate(`/welcome-page?template=${value}`);
-  };
+ 
 
   const toggleSidebar = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark', 
-      primary: {
-        main: '#ffffff',
-      },
-    },
-  });
+ 
   const handleUserDropdownChange = (value) => {
     if (value === "logout") {
       // handle logout functionality
@@ -233,31 +220,7 @@ const MainSidebar = () => {
           </Tooltip>
          
 
-          <div className="justify-content-center w-100 pt-5 p-2 custom_select_journal">
-            {isOpen && (
-              <div>
-                <ThemeProvider theme={darkTheme}>
-                  <FormControl fullWidth>
-                    <InputLabel id="select-label" className="text-white">Select Template</InputLabel>
-                    <Select
-                      labelId="select-label"
-                      id="select"
-                      className=" w-100"
-                      style={{ color: 'white', }}
-                      value={selectedValue}
-                      label="Select Template"
-                      onChange={handleDropdownChange}
-                    >
-                      <MenuItem value="diary">Template</MenuItem>
-                      <MenuItem value="Safe_space">Safe Space</MenuItem>
-                      <MenuItem value="Slow_movement">Slow Movement</MenuItem>
-                      <MenuItem value="Grief_journal">Grief Journal</MenuItem>
-                    </Select>
-                  </FormControl>
-                </ThemeProvider>
-              </div>
-            )}
-          </div>
+          
           {/* New User Menu Item */}
           {isOpen? 
           <Item as="div">

@@ -36,7 +36,7 @@
     -o-border-radius: 20px 20px 0 0;
 }
 .scroll-item .main-content textarea{
-    height: 250px;
+    height: 30vh;
     resize: none;
     border: 1px solid #8b8a8a;
     padding: 20px;
@@ -50,11 +50,7 @@
     outline: none;
     border: 1px solid #8b8a8a;
 }
-@media (min-width: 768px) {
-    .scroll-item {
-        flex: 0 0 50%; /* Two items for larger screens */
-    }
-}
+
 
 .dots-container {
     text-align: center;
@@ -107,7 +103,7 @@
 }
 @media screen and (max-width:700px) {
     .scroll-item .main-content textarea{
-        height: 50vh !important;
+        height: 40vh !important;
     }
     .scroll-container {
         gap: 10px !important;
