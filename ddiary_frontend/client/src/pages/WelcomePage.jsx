@@ -66,28 +66,30 @@ const WelcomePage = () => {
 				{/* <Statistics /> */}
 				<MainSidebar />
 				<div className="content">
-				<div className='w-50 w-sm-75 px-4'>
-                <ThemeProvider theme={darkTheme}>
-                  <FormControl fullWidth>
-                    <InputLabel id="select-label" className="">Select Template</InputLabel>
-                    <Select
-                      labelId="select-label"
-                      id="select"
-                      className=" w-100"
-                      
-                      value={selectedValue}
-                      label="Select Template"
-                      onChange={handleDropdownChange}
-                    >
-                      <MenuItem value="diary">Template</MenuItem>
-                      <MenuItem value="Safe_space">Safe Space</MenuItem>
-                      <MenuItem value="Slow_movement">Slow Movement</MenuItem>
-                      <MenuItem value="Grief_journal">Grief Journal</MenuItem>
-                    </Select>
-                  </FormControl>
-                </ThemeProvider>
-              </div>
-					{renderSelectedComponent()} {/* Render selected component */}
+				<div className="bg-white mainContent">
+					<div className='w-50 w-sm-75 px-4'>
+					<ThemeProvider theme={darkTheme}>
+					<FormControl fullWidth>
+						<InputLabel id="select-label" className="">Select Template</InputLabel>
+						<Select
+						labelId="select-label"
+						id="select"
+						className=" w-100"
+						
+						value={selectedValue}
+						label="Select Template"
+						onChange={handleDropdownChange}
+						>
+						<MenuItem value="diary">Template</MenuItem>
+						<MenuItem value="Safe_space">Safe Space</MenuItem>
+						<MenuItem value="Slow_movement">Slow Movement</MenuItem>
+						<MenuItem value="Grief_journal">Grief Journal</MenuItem>
+						</Select>
+					</FormControl>
+					</ThemeProvider>
+					</div>
+						{renderSelectedComponent()} {/* Render selected component */}
+					</div>
 				</div>
 				
 			</div>

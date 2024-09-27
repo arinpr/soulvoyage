@@ -132,9 +132,9 @@ const scrollToItem = (index) => {
         <>
 
         
-        <div className=" p-2 w-100 px-sm-4 Journal_diary_entry ">
-            <div className="card">
-                <h1 id="safe_space_heading pb-3">Safe space journaling</h1>
+        <div className=" p-2 w-100 px-sm-4  ">
+            <div className="card innerCard">
+                <h3 id="safe_space_heading ">Safe space journaling</h3>
                 <div
                     className="scroll-container"
                     ref={scrollContainerRef}

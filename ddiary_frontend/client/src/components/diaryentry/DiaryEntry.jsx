@@ -93,8 +93,8 @@ const DiaryEntry = () => {
 	};
 
 	return (
-		<div id="diary-entry" className=" p-2 w-100 px-sm-4 Journal_diary_entry">
-			<div className="card">
+		<div id="diary-entry" className=" p-2 w-100 px-sm-4 ">
+			<div className="card innerCard">
 				<label>
 					<input
 						id=""

@@ -130,9 +130,9 @@ const Grief_journal = () => {
     };
 
     return (
-        <div className="p-2 w-100 px-sm-4 Journal_diary_entry">
-            <div className="card">
-                <h1 id="safe_space_heading">Grief Journaling</h1>
+        <div className="p-2 w-100 px-sm-4 ">
+            <div className="card innerCard">
+                <h3 id="safe_space_heading">Grief Journaling</h3>
                 <div
                     className="scroll-container"
                     ref={scrollContainerRef}
